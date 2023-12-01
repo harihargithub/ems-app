@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fi 
+    <!-- Bootstrap CSS -->
+     <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/ 
+
+     <title>Employee Directory</title>
+     </head>
+
+     <body>
+        <div class = " container">
+    <h3>Employee Directory</h3>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+
+
+            <tr>
+                <th>Employee First Name</th>
+                <th>Employee Last Name</th>
+                <th>Employee Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!--Thymeleaf loop-->
+            <tr th:each="employee : ${employees}">
+                <td> th:text="${employee.firstname}"</td>
+                <td>th:text="${employee.lastname}"</td>
+                <td>th:text="${employee.email}"</td>
+
+            </tr>
+
+        </tbody>
+
+
+
+    </table>
+
+
+
+</html>
